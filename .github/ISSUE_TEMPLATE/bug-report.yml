@@ -1,0 +1,54 @@
+name: Bug report / 缺陷报告
+description: Report an installation, packaging, or validator defect / 报告安装、打包或验证器缺陷
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a reproducible defect. Security issues must use private vulnerability reporting.
+        感谢报告可复现缺陷。安全漏洞必须使用私密漏洞报告入口。
+  - type: input
+    id: codex-version
+    attributes:
+      label: Codex version / Codex 版本
+      placeholder: e.g. 1.2.3
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system / 操作系统
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem / 问题
+      description: Describe the observed and expected behavior / 描述实际行为与预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps / 复现步骤
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots / 日志或截图
+      render: shell
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist / 检查项
+      options:
+        - label: I checked existing issues and this is not a security report. / 我已检索现有 Issue，且这不是安全报告。
+          required: true

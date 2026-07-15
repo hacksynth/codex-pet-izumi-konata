@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions / 讨论
+    url: https://github.com/hacksynth/codex-pet-izumi-konata/discussions
+    about: Installation help and showcases / 安装答疑与展示
+  - name: Private security report / 私密安全报告
+    url: https://github.com/hacksynth/codex-pet-izumi-konata/security/advisories/new
+    about: Report vulnerabilities privately / 私密报告安全漏洞
