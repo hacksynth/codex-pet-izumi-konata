@@ -9,7 +9,8 @@
     "contact-sheet.png",
     "look-directions.png",
     "validation.json",
-    "direction-semantics.json"
+    "direction-semantics.json",
+    "previews/manifest.json"
   ],
   "generator": {
     "model": "gpt-image-2",

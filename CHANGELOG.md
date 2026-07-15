@@ -9,6 +9,7 @@ Releases; `pet.json` intentionally contains no separate version field.
 
 - Add open-source project governance, validation tooling, CI, security automation, and
   tagged release packaging.
+- Add deterministic animated effect previews and README gallery.
 
 ## Initial release / 初始版本
 

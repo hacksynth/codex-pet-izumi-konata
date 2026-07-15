@@ -8,6 +8,8 @@ from typing import Literal, cast
 
 from PIL import Image
 
+from .previews import check_previews
+
 Severity = Literal["error", "warning"]
 JsonObject = dict[str, object]
 
@@ -312,4 +314,5 @@ def validate_repository(root: Path) -> list[Finding]:
     findings.extend(validate_direction_semantics(root / "direction-semantics.json"))
     findings.extend(validate_run_summary(root / "run-summary.json"))
     findings.extend(validate_review_images(root))
+    findings.extend(error("previews.stale", message) for message in check_previews(root))
     return findings

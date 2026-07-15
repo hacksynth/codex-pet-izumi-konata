@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "hacksynth" }]
-dependencies = ["Pillow>=11,<13"]
+dependencies = ["Pillow==12.3.0"]
 
 [project.optional-dependencies]
 dev = [
@@ -23,6 +23,7 @@ dev = [
 [project.scripts]
 validate-codex-pet = "codex_pet_validator.cli:main"
 check-dco = "codex_pet_validator.dco:main"
+generate-codex-previews = "codex_pet_validator.preview_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

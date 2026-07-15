@@ -46,6 +46,9 @@ jobs:
       - name: Validate Codex pet package
         run: validate-codex-pet .
 
+      - name: Check committed effect previews
+        run: generate-codex-previews . --check
+
       - name: Check DCO sign-off
         if: github.event_name == 'pull_request'
         run: >-
