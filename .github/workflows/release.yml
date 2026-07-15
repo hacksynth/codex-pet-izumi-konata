@@ -60,7 +60,7 @@ jobs:
           (cd dist && sha256sum "izumi-konata-${RELEASE_TAG}.zip" > SHA256SUMS)
 
       - name: Attest release archive
-        uses: actions/attest-build-provenance@v3
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: dist/izumi-konata-*.zip
 
