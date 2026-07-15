@@ -1,0 +1,50 @@
+name: Sprite defect / 精灵图缺陷
+description: Report animation, direction, clipping, or identity problems / 报告动画、方向、裁切或身份问题
+title: "[Sprite]: "
+labels: ["sprite", "needs-visual-review"]
+body:
+  - type: dropdown
+    id: row
+    attributes:
+      label: Animation row / 动画行
+      options:
+        - idle
+        - running-right
+        - running-left
+        - waving
+        - jumping
+        - failed
+        - waiting
+        - running
+        - review
+        - look directions 000-157.5
+        - look directions 180-337.5
+    validations:
+      required: true
+  - type: input
+    id: frames
+    attributes:
+      label: Affected frame or direction / 受影响帧或方向
+      placeholder: e.g. frame 3 or 270
+    validations:
+      required: true
+  - type: textarea
+    id: defect
+    attributes:
+      label: Visual defect / 视觉缺陷
+      description: Explain what is wrong at normal pet size / 说明在正常宠物尺寸下的问题
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshot or recording / 截图或录屏
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist / 检查项
+      options:
+        - label: I reviewed the contact sheet and searched existing issues. / 我已检查接触表并检索现有 Issue。
+          required: true

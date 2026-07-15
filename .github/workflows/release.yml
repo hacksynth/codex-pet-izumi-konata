@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    name: package-and-release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install validator and development tools
+        run: python -m pip install -e '.[dev]'
+
+      - name: Verify release tag
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          import sys
+
+          tag = os.environ["RELEASE_TAG"]
+          if re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?", tag) is None:
+              print(f"Invalid release tag: {tag}", file=sys.stderr)
+              raise SystemExit(1)
+          PY
+
+      - name: Run release gates
+        run: |
+          ruff check .
+          mypy src tests
+          pytest
+          validate-codex-pet .
+
+      - name: Build install archive and checksums
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          mkdir -p dist/izumi-konata
+          cp pet.json spritesheet.webp dist/izumi-konata/
+          (cd dist && zip -r "izumi-konata-${RELEASE_TAG}.zip" izumi-konata)
+          (cd dist && sha256sum "izumi-konata-${RELEASE_TAG}.zip" > SHA256SUMS)
+
+      - name: Attest release archive
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: dist/izumi-konata-*.zip
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: >-
+          gh release create "$RELEASE_TAG"
+          dist/izumi-konata-*.zip
+          dist/SHA256SUMS
+          pet.json
+          spritesheet.webp
+          contact-sheet.png
+          look-directions.png
+          validation.json
+          direction-semantics.json
+          --verify-tag
+          --generate-notes
+          --title "Izumi Konata Codex Pet ${RELEASE_TAG}"

@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out pull request head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install validator and development tools
+        run: python -m pip install -e '.[dev]'
+
+      - name: Ruff
+        run: ruff check .
+
+      - name: Mypy
+        run: mypy src tests
+
+      - name: Tests
+        run: pytest
+
+      - name: Validate Codex pet package
+        run: validate-codex-pet .
+
+      - name: Check DCO sign-off
+        if: github.event_name == 'pull_request'
+        run: >-
+          check-dco
+          --base '${{ github.event.pull_request.base.sha }}'
+          --head '${{ github.event.pull_request.head.sha }}'
