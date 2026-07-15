@@ -1,0 +1,645 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "file": "spritesheet.webp",
+    "sha256": "4e10d7cba2522174c0c62106379b2fc8309c49d9757621010720720aa8c3c8a1"
+  },
+  "render": {
+    "scale": 2,
+    "cellSize": [
+      192,
+      208
+    ],
+    "previewSize": [
+      384,
+      416
+    ],
+    "checkerTile": 16,
+    "checkerColors": [
+      [
+        244,
+        244,
+        244
+      ],
+      [
+        222,
+        222,
+        222
+      ]
+    ],
+    "loop": 0,
+    "lookDurationMs": 160
+  },
+  "animations": [
+    {
+      "id": "idle",
+      "file": "previews/idle.gif",
+      "cells": [
+        {
+          "row": 0,
+          "column": 0
+        },
+        {
+          "row": 0,
+          "column": 1
+        },
+        {
+          "row": 0,
+          "column": 2
+        },
+        {
+          "row": 0,
+          "column": 3
+        },
+        {
+          "row": 0,
+          "column": 4
+        },
+        {
+          "row": 0,
+          "column": 5
+        }
+      ],
+      "durationsMs": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ],
+      "frameCount": 6,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "bf9c5e44884c905b41b8c18de0683ff2ba35e3788c6789513dbaa4ee54e9fa2b"
+    },
+    {
+      "id": "running-right",
+      "file": "previews/running-right.gif",
+      "cells": [
+        {
+          "row": 1,
+          "column": 0
+        },
+        {
+          "row": 1,
+          "column": 1
+        },
+        {
+          "row": 1,
+          "column": 2
+        },
+        {
+          "row": 1,
+          "column": 3
+        },
+        {
+          "row": 1,
+          "column": 4
+        },
+        {
+          "row": 1,
+          "column": 5
+        },
+        {
+          "row": 1,
+          "column": 6
+        },
+        {
+          "row": 1,
+          "column": 7
+        }
+      ],
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "frameCount": 8,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "2c21c7a78fc577aa94f655379950b88e15a535e25389e7ba0c00fe14a91cbd91"
+    },
+    {
+      "id": "running-left",
+      "file": "previews/running-left.gif",
+      "cells": [
+        {
+          "row": 2,
+          "column": 0
+        },
+        {
+          "row": 2,
+          "column": 1
+        },
+        {
+          "row": 2,
+          "column": 2
+        },
+        {
+          "row": 2,
+          "column": 3
+        },
+        {
+          "row": 2,
+          "column": 4
+        },
+        {
+          "row": 2,
+          "column": 5
+        },
+        {
+          "row": 2,
+          "column": 6
+        },
+        {
+          "row": 2,
+          "column": 7
+        }
+      ],
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "frameCount": 8,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "011a33f3d21fd8c12e73b0ebb2ebc9c15543476dd1db28ec4013161d3b5c21bd"
+    },
+    {
+      "id": "waving",
+      "file": "previews/waving.gif",
+      "cells": [
+        {
+          "row": 3,
+          "column": 0
+        },
+        {
+          "row": 3,
+          "column": 1
+        },
+        {
+          "row": 3,
+          "column": 2
+        },
+        {
+          "row": 3,
+          "column": 3
+        }
+      ],
+      "durationsMs": [
+        140,
+        140,
+        140,
+        280
+      ],
+      "frameCount": 4,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "ac533b6ad6b06fb2bfb666435ed1cb6a5d91928f0c3d632f4cfc688a9f0a8878"
+    },
+    {
+      "id": "jumping",
+      "file": "previews/jumping.gif",
+      "cells": [
+        {
+          "row": 4,
+          "column": 0
+        },
+        {
+          "row": 4,
+          "column": 1
+        },
+        {
+          "row": 4,
+          "column": 2
+        },
+        {
+          "row": 4,
+          "column": 3
+        },
+        {
+          "row": 4,
+          "column": 4
+        }
+      ],
+      "durationsMs": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ],
+      "frameCount": 5,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "c170f3c5e15ff1633c1ae5b9691b486b469d02d18582e3d6a6554400eccebcb7"
+    },
+    {
+      "id": "failed",
+      "file": "previews/failed.gif",
+      "cells": [
+        {
+          "row": 5,
+          "column": 0
+        },
+        {
+          "row": 5,
+          "column": 1
+        },
+        {
+          "row": 5,
+          "column": 2
+        },
+        {
+          "row": 5,
+          "column": 3
+        },
+        {
+          "row": 5,
+          "column": 4
+        },
+        {
+          "row": 5,
+          "column": 5
+        },
+        {
+          "row": 5,
+          "column": 6
+        },
+        {
+          "row": 5,
+          "column": 7
+        }
+      ],
+      "durationsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ],
+      "frameCount": 8,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "70de0f44fc53d2a6bd4cb183ec44522753b98039489b1dfe95c9ec96eb5437d7"
+    },
+    {
+      "id": "waiting",
+      "file": "previews/waiting.gif",
+      "cells": [
+        {
+          "row": 6,
+          "column": 0
+        },
+        {
+          "row": 6,
+          "column": 1
+        },
+        {
+          "row": 6,
+          "column": 2
+        },
+        {
+          "row": 6,
+          "column": 3
+        },
+        {
+          "row": 6,
+          "column": 4
+        },
+        {
+          "row": 6,
+          "column": 5
+        }
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ],
+      "frameCount": 6,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "8e8a4e09081cbd356baf644592a1969063e7a0851ffcff25395b2eea8d1c4664"
+    },
+    {
+      "id": "running",
+      "file": "previews/running.gif",
+      "cells": [
+        {
+          "row": 7,
+          "column": 0
+        },
+        {
+          "row": 7,
+          "column": 1
+        },
+        {
+          "row": 7,
+          "column": 2
+        },
+        {
+          "row": 7,
+          "column": 3
+        },
+        {
+          "row": 7,
+          "column": 4
+        },
+        {
+          "row": 7,
+          "column": 5
+        }
+      ],
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "frameCount": 6,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "0394f84efd5eb977549ad7dd0885e1f47135b4893eb0e7a5e9ad1587cfddac9a"
+    },
+    {
+      "id": "review",
+      "file": "previews/review.gif",
+      "cells": [
+        {
+          "row": 8,
+          "column": 0
+        },
+        {
+          "row": 8,
+          "column": 1
+        },
+        {
+          "row": 8,
+          "column": 2
+        },
+        {
+          "row": 8,
+          "column": 3
+        },
+        {
+          "row": 8,
+          "column": 4
+        },
+        {
+          "row": 8,
+          "column": 5
+        }
+      ],
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ],
+      "frameCount": 6,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "247489449d163323f0dac695fd3fe5011583c28c1f7afa432df6671b7c5a9616"
+    },
+    {
+      "id": "look-directions",
+      "file": "previews/look-directions.gif",
+      "cells": [
+        {
+          "row": 9,
+          "column": 0
+        },
+        {
+          "row": 9,
+          "column": 1
+        },
+        {
+          "row": 9,
+          "column": 2
+        },
+        {
+          "row": 9,
+          "column": 3
+        },
+        {
+          "row": 9,
+          "column": 4
+        },
+        {
+          "row": 9,
+          "column": 5
+        },
+        {
+          "row": 9,
+          "column": 6
+        },
+        {
+          "row": 9,
+          "column": 7
+        },
+        {
+          "row": 10,
+          "column": 0
+        },
+        {
+          "row": 10,
+          "column": 1
+        },
+        {
+          "row": 10,
+          "column": 2
+        },
+        {
+          "row": 10,
+          "column": 3
+        },
+        {
+          "row": 10,
+          "column": 4
+        },
+        {
+          "row": 10,
+          "column": 5
+        },
+        {
+          "row": 10,
+          "column": 6
+        },
+        {
+          "row": 10,
+          "column": 7
+        }
+      ],
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "frameCount": 16,
+      "size": [
+        384,
+        416
+      ],
+      "labeled": false,
+      "sha256": "96c05ded83ca4dc041a894f263734303481554979bbb21529c5df974b7d2bcaa"
+    },
+    {
+      "id": "look-directions-labeled",
+      "file": "previews/look-directions-labeled.gif",
+      "cells": [
+        {
+          "row": 9,
+          "column": 0
+        },
+        {
+          "row": 9,
+          "column": 1
+        },
+        {
+          "row": 9,
+          "column": 2
+        },
+        {
+          "row": 9,
+          "column": 3
+        },
+        {
+          "row": 9,
+          "column": 4
+        },
+        {
+          "row": 9,
+          "column": 5
+        },
+        {
+          "row": 9,
+          "column": 6
+        },
+        {
+          "row": 9,
+          "column": 7
+        },
+        {
+          "row": 10,
+          "column": 0
+        },
+        {
+          "row": 10,
+          "column": 1
+        },
+        {
+          "row": 10,
+          "column": 2
+        },
+        {
+          "row": 10,
+          "column": 3
+        },
+        {
+          "row": 10,
+          "column": 4
+        },
+        {
+          "row": 10,
+          "column": 5
+        },
+        {
+          "row": 10,
+          "column": 6
+        },
+        {
+          "row": 10,
+          "column": 7
+        }
+      ],
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "frameCount": 16,
+      "size": [
+        384,
+        464
+      ],
+      "labeled": true,
+      "sha256": "0fc4aea1d7157757427e9009532e03100bd8c8acb4931d0c55598174d75d75ea"
+    }
+  ]
+}

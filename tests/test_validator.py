@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from codex_pet_validator.previews import ANIMATION_SPECS, check_previews
 from codex_pet_validator.validator import (
     find_absolute_strings,
     validate_direction_semantics,
@@ -68,3 +69,16 @@ def test_absolute_path_scanner_handles_windows_and_posix() -> None:
         "posix": "/tmp/spritesheet.webp",
     }
     assert find_absolute_strings(value) == ["$.windows", "$.posix"]
+
+
+def test_preview_contract_has_nine_states_and_two_direction_loops() -> None:
+    assert len(ANIMATION_SPECS) == 11
+    assert [spec.animation_id for spec in ANIMATION_SPECS[-2:]] == [
+        "look-directions",
+        "look-directions-labeled",
+    ]
+    assert all(len(spec.cells) == len(spec.durations_ms) for spec in ANIMATION_SPECS)
+
+
+def test_committed_previews_are_current() -> None:
+    assert check_previews(repository_root()) == []

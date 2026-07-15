@@ -7,6 +7,7 @@ The MIT License in this repository does **not** apply to:
 - `spritesheet.webp`
 - `contact-sheet.png`
 - `look-directions.png`
+- `previews/*.gif`
 - visual depictions of Izumi Konata contained in release archives or QA artifacts
 
 These files are unofficial fan-made derivative assets based on Izumi Konata from
@@ -24,6 +25,7 @@ not claim ownership of the underlying character or franchise.
 - `spritesheet.webp`
 - `contact-sheet.png`
 - `look-directions.png`
+- `previews/*.gif`
 - Release 压缩包或 QA 产物中出现的泉此方视觉形象
 
 这些文件是基于《幸运星》泉此方制作的非官方同人衍生素材。本仓库不授予基础角色或作品相关的
