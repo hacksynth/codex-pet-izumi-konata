@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "spriteVersionNumber": 2,
+  "run_dir": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\work\\izumi-konata",
+  "spritesheet": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\outputs\\izumi-konata\\spritesheet.webp",
+  "validation": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\work\\izumi-konata\\final\\validation-extended.json",
+  "chroma_despill": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\work\\izumi-konata\\qa\\chroma-despill-extended.json",
+  "contact_sheet": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\outputs\\izumi-konata\\contact-sheet.png",
+  "direction_sheet": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\outputs\\izumi-konata\\look-directions.png",
+  "direction_semantics": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\outputs\\izumi-konata\\direction-semantics.json",
+  "blind_direction_validation": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\work\\izumi-konata\\qa\\direction-blind-validation.json",
+  "blind_review_resolution": null,
+  "continuity": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\work\\izumi-konata\\qa\\look-continuity.json",
+  "review": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\work\\izumi-konata\\qa\\review.json",
+  "package": "C:\\Users\\hacksynth\\.codex\\pets\\izumi-konata",
+  "output_package": "C:\\Users\\hacksynth\\Documents\\Codex\\2026-07-15\\hatch-pet-c-users-hacksynth-codex-2\\outputs\\izumi-konata"
+}
